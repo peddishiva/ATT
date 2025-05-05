@@ -1,0 +1,32 @@
+
+package selenium;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class week5 {
+ public static void main(String[] args) throws InterruptedException {
+	 System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\ChromeDriver\\chromedriver-win32\\chromedriver.exe");
+ WebDriver driver=new ChromeDriver();
+ driver.manage().window().maximize();
+ driver.get("https://cmrithyderabad.edu.in/");
+ WebElement exam=driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[3]/div/div/div/div/div/nav[1]/ul/li[4]/a"));
+ exam.click();
+ Thread.sleep(2000);
+ WebElement res=driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[3]/div/div/div/div/div/nav[1]/ul/li[4]/ul/li[4]/a"));
+ res.click();
+ Thread.sleep(2000);
+ WebElement year1=driver.findElement(By.xpath("/html/body/div[3]/div[1]/form/div[4]/ul/li[2]/input"));
+ year1.click();
+ Thread.sleep(2000);
+ WebElement year=driver.findElement(By.xpath("/html/body/div[3]/div[1]/form/div[3]/ul/li[2]/input"));
+ year.click();
+ Thread.sleep(2000);
+ WebElement year2=driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/a[1]/div/div[1]"));
+ year2.click();
+ Thread.sleep(2000);
+ WebElement password=driver.findElement(By.xpath("/html/body/div[4]/div/div[2]/div/form/input"));
+ password.sendKeys("22r01a05XX");
+ Thread.sleep(2000);
+ }
+} 
